@@ -1,0 +1,60 @@
+{% extends './base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="cont">
+    <div class="banner_ad">
+        {% if data %}
+            <a href="{{data.ad_data.redirect_url}}" target="_blank" id="{{data.ad_data.id}}">
+                <!-- {% if data.ad_data.ad_image_url %} -->
+                    <img id="img" src="{{data.ad_data.ad_image_url}}" alt="AD">
+                <!-- {% else %} -->
+                    <!-- <img id="img" src="{{data.ad_data.ad_image.url}}" alt="AD"> -->
+                <!-- {% endif %} -->
+            </a>    
+        {% else %}
+            <a href="https://333.game.qureka.com/" target="_blank">
+                <img id="img" src="#" alt="AD loading.....">
+            </a>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    window.onload = function banner_ad() {
+        var height = '{{data.height}}';
+        var width = '{{data.width}}';
+        if ((window.innerHeight / window.innerWidth) < (height / width)) {
+            if ((window.innerHeight) < height) {
+
+                document.getElementById("img").style.width = "auto";
+                document.getElementById("img").style.height = (window.innerHeight + "px");
+            } else if ((window.innerWidth) < width) {
+
+                document.getElementById("img").style.width = (window.innerWidth + "px");
+                document.getElementById("img").style.height = "auto";
+            } else {
+                document.getElementById("img").style.height = (window.innerHeight + "px");
+                document.getElementById("img").style.width = "auto";
+
+            }
+
+        } else {
+            if ((window.innerHeight) < height) {
+
+                document.getElementById("img").style.width = "auto";
+                document.getElementById("img").style.height = (window.innerHeight + "px");
+            } else if ((window.innerWidth) < width) {
+
+                document.getElementById("img").style.width = (window.innerWidth + "px");
+                document.getElementById("img").style.height = "auto";
+            } else {
+                document.getElementById("img").style.width = (window.innerWidth + "px");
+                document.getElementById("img").style.height = "auto";
+
+            }
+        }
+    }
+</script>
+
+{% endblock %}

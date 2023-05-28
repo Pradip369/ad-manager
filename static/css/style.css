@@ -1,0 +1,32 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+.center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.interstitial_img{
+    cursor: pointer;
+}
+
+.cont {
+    width: 100% !important;
+    height: 100% !important;
+    /* padding-right: 0px; */
+    /* margin-top: -5px;
+    margin-bottom: -10px; */
+}
+
+.banner_ad {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+}

@@ -1,0 +1,23 @@
+{% extends 'ad/base.html' %}
+
+{% block content %}
+ 
+{% load static %}
+
+<div class="center">
+    {% if data %}
+        <a href="{{data.ad_data.redirect_url}}" target="_blank" id="{{data.ad_data.id}}">
+            <!-- {% if data.ad_data.ad_image_url %} -->
+                <img class="img-fluid mh-100 interstitial_img" id="img" src="{{data.ad_data.ad_image_url}}" alt="AD">
+            <!-- {% else %} -->
+                <!-- <img class="img-fluid mh-100 interstitial_img" id="img" src="{{data.ad_data.ad_image.url}}" alt="AD"> -->
+            <!-- {% endif %} -->
+        </a>    
+    {% else %}
+        <a href="https://333.game.qureka.com/" target="_blank">
+            <img id="img" src="#" alt="AD">
+        </a>
+    {% endif %}
+</div>
+
+{% endblock %}
