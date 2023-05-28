@@ -4,7 +4,6 @@ from github import InputGitTreeElement
 from django.conf import settings
 import threading
 
-# git-repo : https://github.com/kp-bitcoding/ad-manager
 
 class GihubPushThread(threading.Thread):
     def __init__(self,app_name,data,file_name):
